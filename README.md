@@ -17,6 +17,7 @@ samples, guidance on mobile development, and a full API reference.
 
 ---
 - [Tugas 7](#tugas-7)
+- [Tugas 8](#tugas-8)
 ---
 
 ## Tugas 7
@@ -34,3 +35,9 @@ samples, guidance on mobile development, and a full API reference.
   - Konsep hot reload di Flutter memungkinkan pengembang memperbarui kode aplikasi tanpa harus memulai ulang seluruh aplikasi. Hot reload hanya memperbarui bagian yang berubah sehingga sangat cepat dan efisien untuk pengujian tampilan atau logika kecil. Sedangkan hot restart akan me-restart seluruh aplikasi dan menghapus semua state yang tersimpan. Hot restart lebih lambat karena seluruh aplikasi dibangun ulang dari awal, namun berguna ketika ada perubahan besar yang memengaruhi inisialisasi program.
 - Jelaskan bagaimana kamu menambahkan navigasi untuk berpindah antar layar di aplikasi Flutter.
   - Untuk menambahkan navigasi antar layar, Flutter menggunakan sistem Navigator dan Route. Misalnya, ketika pengguna menekan tombol untuk berpindah halaman, kita dapat memanggil ```Navigator.push(context, MaterialPageRoute(builder: (context) => HalamanTujuan()))```. Metode ini menambahkan rute baru ke tumpukan navigasi. Untuk kembali ke halaman sebelumnya, digunakan Navigator.pop(context). Dengan sistem ini, Flutter memudahkan pengembang mengatur transisi dan alur antar halaman secara terstruktur.
+
+## Tugas 8
+- Jelaskan perbedaan antara Navigator.push() dan Navigator.pushReplacement() pada Flutter. Dalam kasus apa sebaiknya masing-masing digunakan pada aplikasi Football Shop kamu?
+- Bagaimana kamu memanfaatkan hierarchy widget seperti Scaffold, AppBar, dan Drawer untuk membangun struktur halaman yang konsisten di seluruh aplikasi?
+- Dalam konteks desain antarmuka, apa kelebihan menggunakan layout widget seperti Padding, SingleChildScrollView, dan ListView saat menampilkan elemen-elemen form? Berikan contoh penggunaannya dari aplikasi kamu.
+- Bagaimana kamu menyesuaikan warna tema agar aplikasi Football Shop memiliki identitas visual yang konsisten dengan brand toko?
