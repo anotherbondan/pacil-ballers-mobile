@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pacil_ballers/screens/menu.dart';
-import 'package:pacil_ballers/screens/newlist_form.dart';
+import 'package:pacil_ballers/screens/product_entry_list.dart';
+import 'package:pacil_ballers/screens/productlist_form.dart';
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
@@ -62,9 +63,23 @@ class LeftDrawer extends StatelessWidget {
             leading: const Icon(Icons.sports_soccer_rounded),
             title: const Text('See Football Product'),
             onTap: () {
-              Navigator.pushReplacement(
+              Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => MyHomePage()),
+                MaterialPageRoute(
+                  builder: (context) => const ProductEntryListPage(showOnlyMyProduct: false,),
+                ),
+              );
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.add_reaction_rounded),
+            title: const Text('My Product'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ProductEntryListPage(showOnlyMyProduct: true,),
+                ),
               );
             },
           ),
