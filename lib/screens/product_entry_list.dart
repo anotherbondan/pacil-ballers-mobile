@@ -18,7 +18,9 @@ class ProductEntryListPage extends StatefulWidget {
 class _ProductEntryListPageState extends State<ProductEntryListPage> {
   Future<List<ProductEntry>> fetchProduct(CookieRequest request) async {
     final response = await request.get('http://localhost:8000/json/');
-    final userData = await request.get('http://localhost:8000/auth/current-user/');
+    final userData = await request.get(
+      'http://localhost:8000/auth/current-user/',
+    );
 
     int currentUserId = userData['user_id'];
 
@@ -56,15 +58,18 @@ class _ProductEntryListPageState extends State<ProductEntryListPage> {
             return Center(child: Text('Error: ${snapshot.error.toString()}'));
           } else if (snapshot.hasData) {
             if (snapshot.data!.isEmpty) {
-              return const Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'There are no product in football product yet.',
-                    style: TextStyle(fontSize: 20, color: Color(0xff59A5D8)),
-                  ),
-                  SizedBox(height: 8),
-                ],
+              return const Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'There are no product yet.',
+                      style: TextStyle(fontSize: 20, color: Color(0xff59A5D8)),
+                      textAlign: TextAlign.center,
+                    ),
+                    SizedBox(height: 8),
+                  ],
+                ),
               );
             } else {
               return ListView.builder(

@@ -5,7 +5,11 @@ class ProductEntryCard extends StatelessWidget {
   final ProductEntry product;
   final VoidCallback onTap;
 
-  const ProductEntryCard({super.key, required this.product, required this.onTap});
+  const ProductEntryCard({
+    super.key,
+    required this.product,
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +57,24 @@ class ProductEntryCard extends StatelessWidget {
                 const SizedBox(height: 6),
 
                 // Category
-                Text('Category: ${product.category.toUpperCase()}'),
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10.0,
+                    vertical: 4.0,
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.indigo.shade100,
+                    borderRadius: BorderRadius.circular(12.0),
+                  ),
+                  child: Text(
+                    product.category.toUpperCase(),
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.indigo.shade700,
+                    ),
+                  ),
+                ),
                 const SizedBox(height: 6),
 
                 Text('Rp${product.price},-'),

@@ -162,6 +162,24 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                     child: const Text('Register'),
                   ),
+                  const SizedBox(height: 36.0),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const LoginPage(),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'Already have an account? Login',
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.primary,
+                        fontSize: 16.0,
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
