@@ -1,6 +1,9 @@
 # pacil_ballers
 
-A new Flutter project.
+[![Build Status](https://app.bitrise.io/app/b81918e1-0eae-4556-9231-26a8915cdf01/status.svg?token=nIYbzDCPWxXyCOdDUhroQw&branch=master)](https://app.bitrise.io/app/b81918e1-0eae-4556-9231-26a8915cdf01)
+
+## Download
+Download aplikasi versi terbaru: [Download APK](https://app.bitrise.io/app/b81918e1-0eae-4556-9231-26a8915cdf01/installable-artifacts/7a3d0b4987332d2e/public-install-page/10727516271e7d75271cabced2703079)
 
 ## Getting Started
 
